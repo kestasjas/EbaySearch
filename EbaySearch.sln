@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EbayTest", "EbayTest.csproj", "{8D1F69C7-2D88-4406-9C2E-69B80F4A134E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D1F69C7-2D88-4406-9C2E-69B80F4A134E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1F69C7-2D88-4406-9C2E-69B80F4A134E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1F69C7-2D88-4406-9C2E-69B80F4A134E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1F69C7-2D88-4406-9C2E-69B80F4A134E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DB19388-F67D-47A0-B0D3-0BC00B67F8A2}
+	EndGlobalSection
+EndGlobal
