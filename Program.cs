@@ -151,15 +151,6 @@ namespace WebAutoCore
 
         void QuitWeb() => driver.Quit();
 
-    
-
-        void ScrollToElement(IWebElement element)
-        {
-            string scrollToViewJavascript = @"arguments[0].scrollIntoView(true);";
-
-            var jsDriver = driver as IJavaScriptExecutor;
-            jsDriver.ExecuteScript(scrollToViewJavascript, element);
-        }
 
         void WaitForPageToLoad(int timeoutInSeconds = 5)
         {
