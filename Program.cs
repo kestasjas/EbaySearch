@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Xunit;
+using System.Drawing;
 
 namespace WebAutoCore
 {
@@ -117,16 +118,23 @@ namespace WebAutoCore
         }
         void CheckCart()
         {
+
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             try 
-            { 
-                driver.FindElement(By.XPath("//button[@aria-label='Close dialog']")).Click();
+            {
+                var dialog = driver.FindElement(By.XPath("//button[@aria-label='Close dialog']"));
+                wait.Until(ExpectedConditions.ElementToBeClickable(dialog));
+                dialog.Click();
                 WaitForPageToLoad();
             }
             catch { }
 
             try 
-            { 
-                driver.FindElement(By.XPath("//a[@class='ux-call-to-action fake-btn fake-btn--fluid fake-btn--secondary']")).Click();
+            {
+                var asGuestButton = driver.FindElement(By.XPath("//a[@class='ux-call-to-action fake-btn fake-btn--fluid fake-btn--secondary']"));
+                wait.Until(ExpectedConditions.
+                    ElementToBeClickable(asGuestButton));
+                asGuestButton.Click();
                 WaitForPageToLoad();
             }
             catch { }
