@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
 using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -9,9 +8,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Threading;
 using Xunit;
-using System.Drawing;
 
 namespace WebAutoCore
 {
