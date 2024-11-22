@@ -10,21 +10,26 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using Xunit;
 
+
 namespace WebAutoCore
 {
 
     public class WebTest : WebDriver
     {
 
-        //Chrome & WebDriver lastest version 117.0.5938.8800
+        //Chrome & WebDriver lastest version 119.0.5938.8800
 
-        string filter = "Iphone 14 pro max 128gb";
+        string filter = "Iphone 14 pro max 128GB";
         string searchFilter = @"Iphone*.?14*.?pro*.?max*.?128gb";
         string checkPrice = String.Empty;
 
-        [Fact]
+        [Fact]     
+
         public void IPhoneCheck()
         {
+
+            //string inp = Console.ReadLine();
+            //Console.WriteLine($"My email is {inp}");
 
             NavigateToEbay();
             SelectIphone();
@@ -40,14 +45,19 @@ namespace WebAutoCore
 
         }
 
-        //Test Steps
-        void NavigateToEbay() => driver.Navigate().GoToUrl("https://www.ebay.com/");
+        //Test Steps Some comments
+        void NavigateToEbay() => driver.Navigate().GoToUrl("https://www.ebay.com/");     
+        //void NavigateToEbay() => driver.Navigate().GoToUrl("file:///C:/root/Edge_200/html/index.html");
 
         void SelectIphone()
         {
+
             driver.FindElement(By.XPath("//input[contains(@class,'gh-tb ui-autocomplete-input')]")).
-                SendKeys(filter);
+            SendKeys(filter);
             driver.FindElement(By.Id("gh-btn")).Click();
+            //driver.FindElement(By.XPath("/html/body/div/table[1]/tbody/tr/td[3]/table/tbody/tr[2]/td/p[4]/span[2]/a/span")).Click();
+            //driver.FindElement(By.XPath("//span[text()='Skype']")).Click();
+
             WaitForPageToLoad();
         }
 
